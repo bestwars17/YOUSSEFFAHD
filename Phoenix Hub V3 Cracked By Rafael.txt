@@ -26,7 +26,7 @@ local AutoFarm = window:AddTab("تمرين و ريبر")
 getgenv()._AutoRepFarmEnabled = false  
 
 -- Switch en la librería
-AutoFarm:AddSwitch("تمرين قوة(استعمله اذا كان بنقك اقل شي250 )", function(state)
+AutoFarm:AddSwitch("تمرين قوة(استعمله اذا كان بنقك اقل من 250 )", function(state)
     getgenv()._AutoRepFarmEnabled = state
     warn("[Auto Rep Farm] Estado cambiado a:", state and "ON" or "OFF")
 end)
@@ -153,7 +153,7 @@ end)
 getgenv()._AutoRepFarmEnabled = false  
 
 -- Switch en la librería
-AutoFarm:AddSwitch("Strength Op (Use it if your minimum ping is less than 150 ms)", function(state)
+AutoFarm:AddSwitch("تمرين قوة(استعمله اذا كان بنقك اقل من 150)", function(state)
     getgenv()._AutoRepFarmEnabled = state
     warn("[Auto Rep Farm] Estado cambiado a:", state and "ON" or "OFF")
 end)
@@ -304,12 +304,12 @@ task.spawn(function()
     end
 end)
 
-AutoFarm:AddSwitch("Auto Eat Egg 30 Minuts", function(state)
+AutoFarm:AddSwitch("ياكل بيض كل 30 دقيقة", function(state)
     autoEatEnabled = state
 end)
 
 
-    AutoFarm:AddSwitch("Spin Fortune Wheel", function(state)
+    AutoFarm:AddSwitch("يلف العجلات", function(state)
     _G.AutoSpinWheel = state
 
     if state then
@@ -324,7 +324,7 @@ end)
     end
 end)
 -- ✅ Optimización visual
-AutoFarm:AddSwitch("Hide All Frames", function(bool)
+AutoFarm:AddSwitch("يشيل القوة الي تضهر وقت التمرين", function(bool)
     local rSto = game:GetService("ReplicatedStorage")
     for _, obj in pairs(rSto:GetChildren()) do
         if obj.Name:match("Frame$") then
@@ -334,7 +334,7 @@ AutoFarm:AddSwitch("Hide All Frames", function(bool)
 end)
 
 
-AutoFarm:AddButton("Anti Lag", function()
+AutoFarm:AddButton("يشيل لاق ", function()
     for _, v in pairs(game:GetDescendants()) do
         if v:IsA("ParticleEmitter") or v:IsA("Smoke") or v:IsA("Fire") or v:IsA("Sparkles") then
             v.Enabled = false
@@ -372,7 +372,7 @@ AutoFarm:AddButton("Anti Lag", function()
         Duration = 5
     })
 end)
-AutoFarm:AddButton("Full Optimization", function()
+AutoFarm:AddButton("يسوي شاشة سودة لتنقيص الاق", function()
     local player = game.Players.LocalPlayer
     local playerGui = player:WaitForChild("PlayerGui")
     local lighting = game:GetService("Lighting")
@@ -446,8 +446,8 @@ AutoFarm:AddButton("Full Optimization", function()
 end)
 
 
-AutoFarm:AddButton("Equip Swift Samurai", function()
-    print("Botón presionado: equipando 8 Swift Samurai")
+AutoFarm:AddButton("تجهير 8 بتات سرعة تمرين", function()
+    print("Botón presionado: تم التجهيز")
 
     local LocalPlayer = game:GetService("Players").LocalPlayer
     local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -488,7 +488,7 @@ AutoFarm:AddButton("Equip Swift Samurai", function()
 end)
 
 
-AutoFarm:AddButton("Jungle Squat", function()
+AutoFarm:AddButton("تمرين قوة و دم", function()
     local player = game.Players.LocalPlayer
     local char = player.Character or player.CharacterAdded:Wait()
     local hrp = char:WaitForChild("HumanoidRootPart")
@@ -502,7 +502,7 @@ AutoFarm:AddButton("Jungle Squat", function()
     VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.E, false, game)
 end)
 
-AutoFarm:AddButton("Jungle lift", function()
+AutoFarm:AddButton("تمرين قوة", function()
     local player = game.Players.LocalPlayer
     local char = player.Character or player.CharacterAdded:Wait()
     local hrp = char:WaitForChild("HumanoidRootPart")
