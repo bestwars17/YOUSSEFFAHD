@@ -933,29 +933,29 @@ task.spawn(function()
         if SelectPlayerName ~= "" then
             local player = game.Players:FindFirstChild(SelectPlayerName)
             if player then
-                if player:FindFirstChild("الجواهر") then
-                    Update1.Text = "الجواهر: " .. FormatDisplay(player.Gems.Value)
+                if player:FindFirstChild("Gems") then
+                    Update1.Text = "Gems: " .. FormatDisplay(player.Gems.Value)
                 end
-                if player:FindFirstChild("السرعة") then
-                    Update3.Text = "السرعة: " .. FormatDisplay(player.Agility.Value)
+                if player:FindFirstChild("Agility") then
+                    Update3.Text = "Agility: " .. FormatDisplay(player.Agility.Value)
                 end
-                if player:FindFirstChild("الدم") then
-                    Update4.Text = "الدم: " .. FormatDisplay(player.Durability.Value)
+                if player:FindFirstChild("Durability") then
+                    Update4.Text = "Durability: " .. FormatDisplay(player.Durability.Value)
                 end
-                if player:FindFirstChild("الوقت في الملك") then
-                    Update6.Text = "الوقت في الملك: " .. FormatDisplay(player.muscleKingTime.Value)
+                if player:FindFirstChild("muscleKingTime") then
+                    Update6.Text = "Muscle King Time: " .. FormatDisplay(player.muscleKingTime.Value)
                 end
-                if player:FindFirstChild("حدد الحجم") then
-                    Update10.Text = "حدد السرعة: " .. FormatDisplay(player.customSize.Value)
+                if player:FindFirstChild("customSize") then
+                    Update10.Text = "Custom Size: " .. FormatDisplay(player.customSize.Value)
                 end
-                if player:FindFirstChild("حدد السرعة") then
-                    Update11.Text = "حدد السرعة: " .. FormatDisplay(player.customSpeed.Value)
+                if player:FindFirstChild("customSpeed") then
+                    Update11.Text = "Custom Speed: " .. FormatDisplay(player.customSpeed.Value)
                 end
-                if player:FindFirstChild("الكرامة الشريرة") then
-                    Update12.Text = "الكرامة الشريرة: " .. FormatDisplay(player.evilKarma.Value)
+                if player:FindFirstChild("evilKarma") then
+                    Update12.Text = "Evil Karma: " .. FormatDisplay(player.evilKarma.Value)
                 end
-                if player:FindFirstChild("الكرامة الجيدة") then
-                    Update13.Text = "الكرامة الجيدة: " .. FormatDisplay(player.goodKarma.Value)
+                if player:FindFirstChild("goodKarma") then
+                    Update13.Text = "Good Karma: " .. FormatDisplay(player.goodKarma.Value)
                 end
 
                 local leaderstats = player:FindFirstChild("leaderstats")
@@ -974,12 +974,13 @@ task.spawn(function()
                 if player:FindFirstChild("currentMap") then
                     Update9.Text = "Current Map: " .. tostring(player.currentMap.Value)
                 else
-                    Update9.Text = "Current Map: Aucune donnÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©e"
+                    Update9.Text = "Current Map: Aucune donnÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©e"
                 end
             end
         end
     end
 end)
+
 --إحصائيات متقدمة ضمن "الإحصائيات"
 estadisticas:AddLabel("————————————————————————————")
 estadisticas:AddLabel("احصائيات متقدمة:").TextSize = 24
