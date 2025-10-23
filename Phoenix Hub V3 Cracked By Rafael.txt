@@ -19,14 +19,14 @@ local window = library:AddWindow("سكربت خاص| تم التطوير من ق
     can_resize = true,
 })
 
-local AutoFarm = window:AddTab("Farm Op")
+local AutoFarm = window:AddTab("تمرين و ريبر")
 
 
 -- Estado inicial
 getgenv()._AutoRepFarmEnabled = false  
 
 -- Switch en la librería
-AutoFarm:AddSwitch("Strength Op (Use it if your minimum ping is 250 ms)", function(state)
+AutoFarm:AddSwitch("تمرين قوة(استعمله اذا كان بنقك اقل شي250 )", function(state)
     getgenv()._AutoRepFarmEnabled = state
     warn("[Auto Rep Farm] Estado cambiado a:", state and "ON" or "OFF")
 end)
