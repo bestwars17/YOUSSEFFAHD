@@ -874,11 +874,11 @@ autoEquipToolsFolder:AddSwitch("Fast Tools", function(Value)
 end)
 
 
-local estadisticas = window:AddTab("Stats")
+local estadisticas = window:AddTab("طاقات")
 
 local SelectPlayerName = ""
 
-local PlayerDrop = estadisticas:AddDropdown("Select Player", function(Value)
+local PlayerDrop = estadisticas:AddDropdown("اختار الاعب", function(Value)
     SelectPlayerName = Value:match("| (.+)")
     previousValues = {}
 end)
@@ -933,29 +933,29 @@ task.spawn(function()
         if SelectPlayerName ~= "" then
             local player = game.Players:FindFirstChild(SelectPlayerName)
             if player then
-                if player:FindFirstChild("Gems") then
-                    Update1.Text = "Gems: " .. FormatDisplay(player.Gems.Value)
+                if player:FindFirstChild("الجواهر") then
+                    Update1.Text = "الجواهر: " .. FormatDisplay(player.Gems.Value)
                 end
-                if player:FindFirstChild("Agility") then
-                    Update3.Text = "Agility: " .. FormatDisplay(player.Agility.Value)
+                if player:FindFirstChild("السرعة") then
+                    Update3.Text = "السرعة: " .. FormatDisplay(player.Agility.Value)
                 end
-                if player:FindFirstChild("Durability") then
-                    Update4.Text = "Durability: " .. FormatDisplay(player.Durability.Value)
+                if player:FindFirstChild("الدم") then
+                    Update4.Text = "الدم: " .. FormatDisplay(player.Durability.Value)
                 end
-                if player:FindFirstChild("muscleKingTime") then
-                    Update6.Text = "Muscle King Time: " .. FormatDisplay(player.muscleKingTime.Value)
+                if player:FindFirstChild("الوقت في الملك") then
+                    Update6.Text = "الوقت في الملك: " .. FormatDisplay(player.muscleKingTime.Value)
                 end
-                if player:FindFirstChild("customSize") then
-                    Update10.Text = "Custom Size: " .. FormatDisplay(player.customSize.Value)
+                if player:FindFirstChild("حدد الحجم") then
+                    Update10.Text = "حدد السرعة: " .. FormatDisplay(player.customSize.Value)
                 end
-                if player:FindFirstChild("customSpeed") then
-                    Update11.Text = "Custom Speed: " .. FormatDisplay(player.customSpeed.Value)
+                if player:FindFirstChild("حدد السرعة") then
+                    Update11.Text = "حدد السرعة: " .. FormatDisplay(player.customSpeed.Value)
                 end
-                if player:FindFirstChild("evilKarma") then
-                    Update12.Text = "Evil Karma: " .. FormatDisplay(player.evilKarma.Value)
+                if player:FindFirstChild("الكرامة الشريرة") then
+                    Update12.Text = "الكرامة الشريرة: " .. FormatDisplay(player.evilKarma.Value)
                 end
-                if player:FindFirstChild("goodKarma") then
-                    Update13.Text = "Good Karma: " .. FormatDisplay(player.goodKarma.Value)
+                if player:FindFirstChild("الكرامة الجيدة") then
+                    Update13.Text = "الكرامة الجيدة: " .. FormatDisplay(player.goodKarma.Value)
                 end
 
                 local leaderstats = player:FindFirstChild("leaderstats")
@@ -980,11 +980,11 @@ task.spawn(function()
         end
     end
 end)
--- Advanced Stats dentro de "estadisticas"
+--إحصائيات متقدمة ضمن "الإحصائيات"
 estadisticas:AddLabel("————————————————————————————")
-estadisticas:AddLabel("stats advanced:").TextSize = 24
+estadisticas:AddLabel("احصائيات متقدمة:").TextSize = 24
 
-local enemyHealthLabel = estadisticas:AddLabel("Enemy Health: N/A")
+local enemyHealthLabel = estadisticas:AddLabel("دم الخصم: N/A")
 enemyHealthLabel.TextSize = 20
 enemyHealthLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 
@@ -4423,15 +4423,15 @@ Gift:AddButton("Gift Eggs", function()
     end
 end)
 
-Gift:AddLabel("Gifting Tropical Shakes:").TextSize = 22
+Gift:AddLabel("اهداء المشروب").TextSize = 22
 
-local tropicalShakeLabel = Gift:AddLabel("Tropical Shakes: 0")
+local tropicalShakeLabel = Gift:AddLabel("المشروب: 0")
 tropicalShakeLabel.TextSize = 18
 
 local selectedShakePlayer = nil
 local shakeCount = 0
 
-local shakeDropdown = Gift:AddDropdown("Player to Gift Tropical Shakes", function(selectedDisplayName)
+local shakeDropdown = Gift:AddDropdown("اللاعب الي تبي تعطيه المشروب", function(selectedDisplayName)
     for _, plr in ipairs(Players:GetPlayers()) do
         if plr.DisplayName == selectedDisplayName then
             selectedShakePlayer = plr
@@ -4452,11 +4452,11 @@ Players.PlayerAdded:Connect(function(plr)
     end
 end)
 
-Gift:AddTextBox("Tropical Shakes gift", function(text)
+Gift:AddTextBox("اهداء المشروب", function(text)
     shakeCount = tonumber(text) or 0
 end)
 
-Gift:AddButton("Gift Tropical Shakes", function()
+Gift:AddButton("اهداء مشروب", function()
     if selectedShakePlayer and shakeCount > 0 then
         for i = 1, shakeCount do
             local shake = Players.LocalPlayer.consumablesFolder:FindFirstChild("Tropical Shake")
@@ -4495,7 +4495,7 @@ task.spawn(function()
 end)
 
 
-local Credits = window:AddTab("Credits")
+local Credits = window:AddTab("الحقوق")
 
 Credits:AddLabel("نسخة خاصة من سكربت فهد و يوسف")
 Credits:AddLabel("السكربت مدفوع :")
