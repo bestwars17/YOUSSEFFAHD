@@ -550,8 +550,8 @@ end)
 local function updateRebirths()
     local current = rebirthsStat.Value
     local gained = current - initialRebirths
-    footerRebirthsLabel.Text = "Rebirths: " .. current
-    footerRebirthsGainedLabel.Text = "Rebirths Gained: " .. gained
+    footerRebirthsLabel.Text = "عدد الريبر حقك: " .. current
+    footerRebirthsGainedLabel.Text = "عدد الريبر الي سويته : " .. gained
 end
 
 rebirthsStat.Changed:Connect(updateRebirths)
@@ -614,11 +614,11 @@ local function getStrengthRequiredForRebirth()
 end
 
 -- Switch en la library
-fastStrengthFolder:AddSwitch("Fast Rebirth", function(state)
+fastStrengthFolder:AddSwitch("ريبر سريع", function(state)
     getgenv().AutoFarming = state
 
     if state then
-        warn("⚡ AutoFarming ACTIVADO")
+        warn("⚡ تم التفعيل")
 
         task.spawn(function()
             while getgenv().AutoFarming do
@@ -658,7 +658,7 @@ fastStrengthFolder:AddSwitch("Fast Rebirth", function(state)
         warn("🛑 AutoFarming DESACTIVADO")
     end
 end)
-local rebirthFolder = AutoFarm:AddFolder("Rebiths Without Packs")
+local rebirthFolder = AutoFarm:AddFolder("ريبر بدون باكات")
 
 -- Guardar objetivo de rebirths
 local targetRebirthAmount = nil
@@ -706,7 +706,7 @@ local targetRebirthToggle = rebirthFolder:AddSwitch("Start", function(enabled)
     end
 end)
 
-rebirthFolder:AddSwitch("Auto Teleport to the king", function(enabled)
+rebirthFolder:AddSwitch("تيليبورت للملك", function(enabled)
     if enabled then
         _G.AutoTeleportKing = true
         local targetPosition = Vector3.new(-8750.1318359375, 124.37654876708984, -5861.2666015625)
@@ -729,7 +729,7 @@ rebirthFolder:AddSwitch("Auto Teleport to the king", function(enabled)
     end
 end)
 
-rebirthFolder:AddSwitch("Auto size 2", function(enabled)
+rebirthFolder:AddSwitch("حجم 2", function(enabled)
     if enabled then
         _G.AutoSize2 = true
         while _G.AutoSize2 do
@@ -752,7 +752,7 @@ end)
 
 
 
-local autoEquipToolsFolder = AutoFarm:AddFolder("Auto Tools")
+local autoEquipToolsFolder = AutoFarm:AddFolder("ادوات اوتو")
 
 -- Botón para desbloquear el Gamepass AutoLift
 autoEquipToolsFolder:AddButton("Gamepass AutoLift", function()
