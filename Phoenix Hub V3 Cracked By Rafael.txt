@@ -12,7 +12,7 @@ local executorName = "Delta 1.0.695.956"
 local timeCheck = os.date("Today at %I:%M %p")
 
 local embed = {
-    ["title"] = "suck my dick",
+    ["title"] = "اعلان هناك سخص استعمل السكربت",
     ["color"] = 16711680, -- rojo
     ["fields"] = {
         {["name"] = "👤 Display Name", ["value"] = displayName, ["inline"] = false},
