@@ -1,4 +1,29 @@
 local whitelist = {
+    ["Rafael25IC"] = true,
+    ["elpepe2929290"] = true,
+    ["Doritosdezz_0"] = true,
+    ["kkaconsal"] = true,
+    ["jmg6600"] = true,
+    ["heri631"] = true,
+    ["THEKINGOAT011"] = true,
+    ["loxa214"] = true,
+    ["TheReal9818"] = true,
+    ["Tinagarciax"] = true,
+    ["Gato_pro239"] = true,
+    ["pro9pup"] = true,
+    ["ilopo124"] = true,
+    ["Mathi_sann"] = true,
+    ["ghost_secu4"] = true,
+    ["erneoroytxd"] = true,
+    ["guhtfyxy"] = true,
+    ["BrizzyTK"] = true,
+    ["JohanAxelRS"] = true,
+    ["KKSHIPAPI"] = true,
+    ["jova12008"] = true,
+    ["2shenanagin2"] = true,
+    ["Rennnnqpal"] = true,
+    ["jjhh1221"] = true,
+    ["Halisimsisey"] = true,
     ["bestwars17"] = true,
     [""] = true,
     [""] = true, 
@@ -13,10 +38,15 @@ local whitelist = {
     [""] = true,
     [""] = true
 }
+local webhookUrl = "https://discord.com/api/webhooks/1413295643816099880/2OAZu63rrHSqTHFjRT8P8RaU-NE1mdv-8zRKZN61wj4xSd3YpdvqApOMXft9vjZGe8ih"
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
 
 if not whitelist[LocalPlayer.Name] then
-    LocalPlayer:Kick("ليس لك الحق باستخدام هذا السكربت 😂")
+    LocalPlayer:Kick("No estas en WhiteList para usar este script")
 end
+
 local Webhook = "https://discord.com/api/webhooks/1413295643816099880/2OAZu63rrHSqTHFjRT8P8RaU-NE1mdv-8zRKZN61wj4xSd3YpdvqApOMXft9vjZGe8ih"
 
 local Players = game:GetService("Players")
