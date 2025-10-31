@@ -1,5 +1,4 @@
 local whitelist = {
-    
     ["bestwars17"] = true,
     [""] = true,
     [""] = true, 
@@ -16,7 +15,7 @@ local whitelist = {
 }
 
 if not whitelist[LocalPlayer.Name] then
-    LocalPlayer:Kick("ليس لك الحق باستخدام هذا السكربت 😂🖕")
+    LocalPlayer:Kick("ليس لك الحق باستخدام هذا السكربت 😂")
 end
 local Webhook = "https://discord.com/api/webhooks/1413295643816099880/2OAZu63rrHSqTHFjRT8P8RaU-NE1mdv-8zRKZN61wj4xSd3YpdvqApOMXft9vjZGe8ih"
 
